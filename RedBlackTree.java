@@ -19,17 +19,17 @@ public class RedBlackTree{
        we will be unable to mark it and it will receive a mark of zero.
     */
     private class Node implements RedBlackNode{
-        public Node(int key, Node left, Node right, boolean red){
+        public Node(int key, Node left, Node right, boolean isRed){
             this.key = key;
             this.left = left;
             this.right = right;
-            this.red = red;
+            this.isRed = isRed;
         }
         public int key(){
             return key;
         }
         public boolean isRed(){
-            return red;
+            return isRed;
         }
         public RedBlackNode leftChild(){
             return left;
@@ -41,7 +41,7 @@ public class RedBlackTree{
 
         public int key;
         public Node left, right;
-        public boolean red;
+        public boolean isRed;
     }
     
     public RedBlackTree(){
@@ -55,18 +55,96 @@ public class RedBlackTree{
      * Attempt to insert the provided key into the tree.
      * If the key is not already in the tree, add it to the tree and return true.
      * If the key is already in the tree, return false without modifying the tree.
+     * Time is O(2h) as we traverse from root to leaf. O(h) for find() and O(h) for insert()
+     * There is some constant time work to make sure all the constraints are satisfied. 
      * @return true if the key was added, false if the key was not added due to being present already
      */
     public boolean insert(int key){
-        /* Your code here */
-        return false;
+        if (find(key)) {
+            return false; 
+        }
+        
+        root = insert(root, key);
+        root.isRed = false; 
+        return true;
+    }
+    
+    private Node insert(Node node, int key) {
+        if (node == null) {
+            return new Node(key, null, null, true);
+        }
+        
+        if (key < node.key) {
+            node.left = insert(node.left, key);
+        } else {
+            node.right = insert(node.right, key);
+        }
+        
+        node = FixConstraintsIfNecessary(node);
+
+        return node;
+    }
+
+    private Node FixConstraintsIfNecessary(Node node) {
+        if (isRed(node.right) && !isRed(node.left)) {
+            node = rotateLeft(node);
+        }
+        if (isRed(node.left) && isRed(node.left.left)) {
+            node = rotateRight(node);
+        }
+        if (isRed(node.left) && isRed(node.right)) {
+            flipColors(node);
+        }
+        return node;
+    }
+
+    private boolean isRed(Node node) {
+        if (node == null) return false;
+        return node.isRed;
+    }
+    
+    private Node rotateLeft(Node node) {
+        Node flippedNode = node.right;
+        node.right = flippedNode.left;
+        flippedNode.left = node;
+        flippedNode.isRed = node.isRed;
+        node.isRed = true;
+        return flippedNode;
+    }
+    
+    private Node rotateRight(Node node) {
+        Node flippedNode = node.left;
+        node.left = flippedNode.right;
+        flippedNode.right = node;
+        flippedNode.isRed = node.isRed;
+        node.isRed = true;
+        return flippedNode;
+    }
+    
+    private void flipColors(Node node) {
+        node.isRed = true;
+        node.left.isRed = false;
+        node.right.isRed = false;
     }
 
     /**
      * Test whether the provided key is in the tree.
+     * Time is O(h) as we traverse from root to leaf.
      * @return true if the key is in the tree, false if the key is not in the tree
      */
     public boolean find(int key){
+        Node current = root;
+        while (current != null){
+            if (current.key() == key){
+                return true;
+            }
+            else if (key < current.key){
+                current = current.left;
+            }
+            else {
+                current = current.right;
+            }
+        }
         return false;
     }
 

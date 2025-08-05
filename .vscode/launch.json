@@ -1,0 +1,82 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "RedBlackTester - Example 1",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i6,10,17,187,225,10,226 v stree1.svg i20,25,226,445,485 v stree2.svg"
+        },
+        {
+            "type": "java",
+            "name": "Test Case 1: Simple Right Rotation",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i30,20,10 v stest1.svg"
+        },
+        {
+            "type": "java",
+            "name": "Test Case 2: Simple Left Rotation",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i10,20,30 v stest2.svg"
+        },
+        {
+            "type": "java",
+            "name": "Test Case 3: Right-Left Rotation",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i10,30,20 v stest3.svg"
+        },
+        {
+            "type": "java",
+            "name": "Test Case 4: Left-Right Rotation",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i30,10,20 v stest4.svg"
+        },
+        {
+            "type": "java",
+            "name": "Test Case 5: Mixed and Find",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i50,30,70,20,40,60,80 v f30,90,60 stest5.svg"
+        },
+        {
+            "type": "java",
+            "name": "Test Case 6: Duplicates",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i15,5,25 v i15,25 v stest6.svg"
+        },
+        {
+            "type": "java",
+            "name": "Edge Case 1: Empty Tree Ops",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "f100 v sempty_insert.svg"
+        },
+        {
+            "type": "java",
+            "name": "Edge Case 2: Boundary Find",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i50,20,80,10,30,70,90 v sboundary_find.svg f10,90,5,100,55"
+        },
+        {
+            "type": "java",
+            "name": "Edge Case 3: Sequential Insert",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i1,2,3,4,5,6,7,8,9,10 v ssequential_insert.svg"
+        },
+        {
+            "type": "java",
+            "name": "Edge Case 4: Negative and Zero",
+            "request": "launch",
+            "mainClass": "RedBlackTester",
+            "args": "i10,-5,20,0,-15,25 v snegative_zero.svg"
+        }
+    ]
+}

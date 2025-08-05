@@ -55,7 +55,7 @@ public class RedBlackTree{
      * Attempt to insert the provided key into the tree.
      * If the key is not already in the tree, add it to the tree and return true.
      * If the key is already in the tree, return false without modifying the tree.
-     * Time is O(2h) as we traverse from root to leaf. O(h) for find() and O(h) for insert()
+     * Time is O(2h) or just O(h) as we traverse from root to leaf. O(h) for find() and O(h) for insert()
      * There is some constant time work to make sure all the constraints are satisfied. 
      * @return true if the key was added, false if the key was not added due to being present already
      */
@@ -66,7 +66,7 @@ public class RedBlackTree{
         
         root = insert(root, key);
         root.isRed = false; 
-        return true;
+        return true; 
     }
     
     private Node insert(Node node, int key) {

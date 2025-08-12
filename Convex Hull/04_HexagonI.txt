@@ -1,0 +1,14 @@
+Dear Hiring Manager,
+
+I am writing to express my keen interest in the Software Engineer position at AOT Technologies. As a resident of Victoria, I’ve followed your company’s growth and contributions to the local tech scene and your impactful work with public sector clients. Your mission to build reusable, sustainable software solutions resonates strongly with my own professional philosophy of making things as simple as possible, but no simpler.
+
+With over three years of experience in backend development, I have a strong background in C#, .NET, and building robust applications on the Azure cloud platform, all of which I know are key parts of your technology stack. In my current role, I have re-architected database schemas to achieve a 70% improvement in data retrieval and played a lead role in transitioning a product to a SaaS model. This experience has given me a deep appreciation for writing clean, maintainable, and efficient code—qualities I know are essential when developing software for government and enterprise clients.
+
+I was particularly intrigued by your open-source solution, formsflow.ai, and its use of workflow automation and low-code principles. The idea of democratizing creation and empowering users through technology is exciting. I am always eager to learn and have independently developed personal projects in Python and explored AI frameworks like Langchain. My personal website and portfolio, which I built myself, can be found at https://gmakkar.ca/.
+
+The opportunity to contribute to your team, on-site here in Victoria, would be a fantastic fit for my skills and career aspirations. I am a collaborative team player, have experience as a Scrum Master, and am adept at preparing documentation and communicating technical solutions.
+
+Thank you for your time and consideration. I have attached my resume for your review and would welcome the chance to discuss how I can contribute to the success of AOT Technologies.
+
+Sincerely,
+Gobindpreet Makkar

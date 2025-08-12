@@ -27,6 +27,10 @@ Implementation of convex hull algorithms to compute the smallest convex polygon 
 - Random point sets of varying sizes
 - Edge cases (identical points, collinear points)
 
+### Performance Notes
+
+The current implementation of the convex hull algorithm has known inefficiencies due to accessing elements by index from a linked list data structure. This results in O(n) time complexity for each index-based access, leading to suboptimal overall performance for large datasets.
+
 ## Red Black Trees
 
 Implementation of a Red-Black Tree data structure with insertion, deletion, and validation functionality.
@@ -38,7 +42,6 @@ Implementation of a Red-Black Tree data structure with insertion, deletion, and 
 - `RedBlackValidator.java` - Validation of Red-Black tree properties
 - `RedBlackSVGRenderer.java` - Visualization of trees as SVG
 - `RedBlackTrege.java` - Additional tree functionality
-- `tree1.svg`, `tree2.svg` - Sample tree visualizations
 
 ## Images and Graphs
 
@@ -50,7 +53,7 @@ Graph algorithms applied to image processing, including pathfinding and connecti
 - `PixelGraph.java` - Graph representation of images
 - `PixelVertex.java` - Vertex representation for pixels
 - `PixelWriter.java` - Utility for writing pixel data
-- Sample images (`heart.png`, `rainbow.png`)
+- Sample images For Testing (`heart.png`, `rainbow.png`)
 
 ### Algorithms
 - Connected component analysis
@@ -71,10 +74,6 @@ java HullViewer225
 java RedBlackTester
 java ImageViewer225
 ```
-
-## Author
-
-This repository contains academic work completed for CSC 225 at the University of Victoria.
 
 ## License
 
